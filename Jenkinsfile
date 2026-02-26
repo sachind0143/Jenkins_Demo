@@ -14,15 +14,11 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
+                dir('SelMavTng'){
                 bat 'mvn clean compile'
-            }
-        }
-
-        stage('Test Execution') {
-            steps {
-                bat 'mvn test'
+                }
             }
         }
 
