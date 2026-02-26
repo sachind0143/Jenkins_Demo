@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                dir('SelMavTng'){
+                dir('SelMavTngJenkins'){
                 bat 'mvn clean compile'
                 }
             }
